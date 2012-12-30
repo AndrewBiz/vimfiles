@@ -1,7 +1,9 @@
+"ANB
 if has("gui_win32") || has("gui_win32s")
   let $LANG='en'
   set langmenu=none
 endif
+set spelllang=ru_yo,en_us
 
 "avoiding annoying CSApprox warning message
 let g:CSApprox_verbose_level = 0
@@ -47,7 +49,7 @@ nmap <D-6> g^
 nmap <D-0> g^
 
 "add some line space for easy reading
-set linespace=4
+set linespace=2
 
 "disable visual bell
 set visualbell t_vb=
@@ -186,9 +188,9 @@ function! s:Median(nums)
 endfunction
 
 "indent settings
-set tabstop=4
-set shiftwidth=4
-set softtabstop=4
+set tabstop=2
+set shiftwidth=2
+set softtabstop=2
 set expandtab
 set autoindent
 
@@ -453,7 +455,24 @@ if has("balloon_eval")
 endif
 
 "ANB
-set sw=2 "Заменяет TAB на 2 пробела
-set sts=2 "Аналогично, но в случае автоотступа
+"set sw=2
+"set sts=2
 let g:fuzzy_ignore = "gems/*"
+"set keymap=russian-jcukenwin
+"set iminsert=0
+"set imsearch=0
 
+"cmap <silent> <C-F> <C-^>
+"imap <silent> <C-F> <C-^>X<Esc>:call MyKeyMapHighlight()<CR>a<C-H>
+"nmap <silent> <C-F> a<C-^><Esc>:call MyKeyMapHighlight()<CR>
+"vmap <silent> <C-F> <Esc>a<C-^><Esc>:call MyKeyMapHighlight()<CR>gv
+
+"function MyKeyMapHighlight()
+	"if &iminsert == 0
+		"hi StatusLine ctermfg=DarkBlue guifg=DarkBlue
+    "else
+        "hi StatusLine ctermfg=DarkRed guifg=DarkRed
+    "endif
+"endfunction
+"call MyKeyMapHighlight()
+"au WinEnter * :call MyKeyMapHighlight()
