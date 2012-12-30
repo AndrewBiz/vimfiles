@@ -1,3 +1,8 @@
+if has("gui_win32") || has("gui_win32s")
+  let $LANG='en'
+  set langmenu=none
+endif
+
 "avoiding annoying CSApprox warning message
 let g:CSApprox_verbose_level = 0
 
@@ -230,7 +235,8 @@ if has("gui_running")
     "tell the term has 256 colors
     set t_Co=256
 
-    colorscheme molokai
+    colorscheme railscasts
+    "colorscheme molokai
     set guitablabel=%M%t
     set lines=40
     set columns=115
@@ -444,3 +450,9 @@ inoremap <Esc>D <left>
 if has("balloon_eval")
   set noballooneval
 endif
+
+"ANB
+set sw=2 "Заменяет TAB на 2 пробела
+set sts=2 "Аналогично, но в случае автоотступа
+let g:fuzzy_ignore = "gems/*"
+

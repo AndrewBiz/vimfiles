@@ -1,0 +1,5 @@
+" Example Vim graphical configuration.
+" Copy to ~/.gvimrc or ~/_gvimrc.
+
+source ~\vimfiles\gvimrc
+
