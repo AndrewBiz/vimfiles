@@ -3,7 +3,6 @@ if has("gui_win32") || has("gui_win32s")
   let $LANG='en'
   set langmenu=none
 endif
-set spelllang=ru_yo,en_us
 
 "avoiding annoying CSApprox warning message
 let g:CSApprox_verbose_level = 0
@@ -290,9 +289,6 @@ inoremap <C-L> <C-O>:nohls<CR>
 "map to bufexplorer
 nnoremap <leader>b :BufExplorer<cr>
 
-"map to CommandT TextMate style finder
-nnoremap <leader>t :CommandT<CR>
-
 "map Q to something useful
 noremap Q gq
 
@@ -410,10 +406,10 @@ nmap <S-Tab> gt
 nmap <C-S-Tab> gT
 
 "Key mapping for textmate-like indentation
-nmap <D-[> <<
-nmap <D-]> >>
-vmap <D-[> <gv
-vmap <D-]> >gv
+"nmap <D-[> <<
+"nmap <D-]> >>
+"vmap <D-[> <gv
+"vmap <D-]> >gv
 
 let ScreenShot = {'Icon':0, 'Credits':0, 'force_background':'#FFFFFF'}
 
@@ -455,27 +451,15 @@ if has("balloon_eval")
 endif
 
 "ANB
-"set sw=2
-"set sts=2
 let g:fuzzy_ignore = "gems/*"
-"set keymap=russian-jcukenwin
-"set iminsert=0
-"set imsearch=0
 
-"cmap <silent> <C-F> <C-^>
-"imap <silent> <C-F> <C-^>X<Esc>:call MyKeyMapHighlight()<CR>a<C-H>
-"nmap <silent> <C-F> a<C-^><Esc>:call MyKeyMapHighlight()<CR>
-"vmap <silent> <C-F> <Esc>a<C-^><Esc>:call MyKeyMapHighlight()<CR>gv
-
-"function MyKeyMapHighlight()
-	"if &iminsert == 0
-		"hi StatusLine ctermfg=DarkBlue guifg=DarkBlue
-    "else
-        "hi StatusLine ctermfg=DarkRed guifg=DarkRed
-    "endif
-"endfunction
-"call MyKeyMapHighlight()
-"au WinEnter * :call MyKeyMapHighlight()
+"russian keymapping
+set spelllang=ru_yo,en_us
+set keymap=russian-jcukenmac
+set iminsert=0
+set imsearch=0
+imap <F5> 
+cmap <F5> 
 
 " vimcasts.org
 " Shortcut to rapidly toggle `set list`
