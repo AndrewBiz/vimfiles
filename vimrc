@@ -456,6 +456,8 @@ let g:fuzzy_ignore = "gems/*"
 "russian keymapping
 set spelllang=ru_yo,en_us
 set keymap=russian-jcukenmac
+nmap <leader>m :set keymap=russian-jcukenmac<CR>
+nmap <leader>w :set keymap=russian-jcukenwin<CR>
 set iminsert=0
 set imsearch=0
 imap <F5> 
